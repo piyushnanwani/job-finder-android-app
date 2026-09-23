@@ -1,5 +1,6 @@
 package com.piyushnanwani.joblistingapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.LinearLayout
@@ -55,6 +56,10 @@ class OnboardingActivity : AppCompatActivity() {
         btnGetStarted.setOnClickListener {
             // Handle the "Get Started" button click
             // You can navigate to the main activity or perform any other action here
+
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+            finish()
         }
 
     }

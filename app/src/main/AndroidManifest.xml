@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JobListingApp">
         <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".OnboardingActivity"
             android:exported="false" />
         <activity
@@ -25,7 +28,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>
