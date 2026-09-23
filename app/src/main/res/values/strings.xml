@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">JobListingApp</string>
     <string name="default_web_client_id">251404252673-loob12d1gj41spnlbcd6s2o37lk0dqll.apps.googleusercontent.com</string>
+    <string name="title_activity_tab">TabActivity</string>
+    <string name="tab_text_1">Home</string>
+    <string name="tab_text_2">Saved</string>
+    <string name="tab_text_3">Profile</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

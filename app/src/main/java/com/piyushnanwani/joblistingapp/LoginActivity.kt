@@ -1,5 +1,6 @@
 package com.piyushnanwani.joblistingapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
@@ -98,6 +99,10 @@ class LoginActivity : AppCompatActivity() {
                     val user = auth.currentUser
                     Log.d("LoginActivity", "User signed in: ${user?.displayName} (${user?.email})")
                     Toast.makeText(this, "Authentication Successful.", Toast.LENGTH_SHORT).show()
+
+                    val intent = Intent(this, TabActivity::class.java)
+                    startActivity(intent)
+                    finish()
 //                    updateUI(user)
                 } else {
                     Log.w("LoginActivity", "signInWithCredential:failure", task.exception)
