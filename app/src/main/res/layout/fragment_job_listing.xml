@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:background="#FFFFFF"
-    tools:context=".JobListingFragment">
+    android:orientation="vertical"
+    tools:context=".ui.main.JobListingFragment">
 
     <!-- Header -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="64dp"
-        android:orientation="horizontal"
         android:gravity="center_vertical"
+        android:orientation="horizontal"
         android:paddingStart="24dp"
         android:paddingEnd="18dp">
 
@@ -36,7 +36,6 @@
             android:textSize="32sp" />
 
     </LinearLayout>
-
 
     <!-- Search Bar -->
     <LinearLayout
@@ -74,14 +73,13 @@
 
     </LinearLayout>
 
-
     <!-- Job Type Filters -->
     <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="58dp"
         android:layout_marginTop="8dp"
-        android:scrollbars="none"
-        android:fillViewport="false">
+        android:fillViewport="false"
+        android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -143,235 +141,14 @@
 
     </HorizontalScrollView>
 
-
-    <!-- Jobs -->
-    <ScrollView
+    <!-- Jobs RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvJobs"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:fillViewport="true"
-        android:scrollbars="none">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-
-            <!-- Job 1 -->
-            <LinearLayout
-                android:id="@+id/jobCard1"
-                android:layout_width="match_parent"
-                android:layout_height="145dp"
-                android:background="@drawable/bg_job_card"
-                android:orientation="vertical"
-                android:paddingStart="28dp"
-                android:paddingTop="18dp"
-                android:paddingEnd="20dp"
-                android:paddingBottom="14dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Frontend Developer"
-                        android:textColor="#111111"
-                        android:textSize="19sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="₹ 6L - 10L"
-                        android:textColor="#222222"
-                        android:textSize="15sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="24dp"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="›"
-                        android:textColor="#222222"
-                        android:textSize="24sp" />
-
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
-                    android:text="Atomxel LLP"
-                    android:textColor="#6F7782"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="9dp"
-                    android:text="⌖  Noida, India"
-                    android:textColor="#606872"
-                    android:textSize="15sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="7dp"
-                    android:text="▣  Full Time"
-                    android:textColor="#606872"
-                    android:textSize="15sp" />
-
-            </LinearLayout>
-
-
-            <!-- Job 2 -->
-            <LinearLayout
-                android:id="@+id/jobCard2"
-                android:layout_width="match_parent"
-                android:layout_height="158dp"
-                android:background="@drawable/bg_job_card"
-                android:orientation="vertical"
-                android:paddingStart="28dp"
-                android:paddingTop="24dp"
-                android:paddingEnd="20dp"
-                android:paddingBottom="14dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Android Developer"
-                        android:textColor="#111111"
-                        android:textSize="19sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="₹ 5L - 8L"
-                        android:textColor="#222222"
-                        android:textSize="15sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="24dp"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="›"
-                        android:textColor="#222222"
-                        android:textSize="24sp" />
-
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
-                    android:text="TechSolutions"
-                    android:textColor="#6F7782"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="9dp"
-                    android:text="⌖  Bengaluru, India"
-                    android:textColor="#606872"
-                    android:textSize="15sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="7dp"
-                    android:text="▣  Full Time"
-                    android:textColor="#606872"
-                    android:textSize="15sp" />
-
-            </LinearLayout>
-
-
-            <!-- Job 3 -->
-            <LinearLayout
-                android:id="@+id/jobCard3"
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:background="@drawable/bg_job_card"
-                android:orientation="vertical"
-                android:paddingStart="28dp"
-                android:paddingTop="20dp"
-                android:paddingEnd="20dp"
-                android:paddingBottom="14dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Backend Developer"
-                        android:textColor="#111111"
-                        android:textSize="19sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="₹ 7L - 12L"
-                        android:textColor="#222222"
-                        android:textSize="15sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="24dp"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="›"
-                        android:textColor="#222222"
-                        android:textSize="24sp" />
-
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
-                    android:text="NextGen Systems"
-                    android:textColor="#6F7782"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="9dp"
-                    android:text="⌖  Remote"
-                    android:textColor="#606872"
-                    android:textSize="15sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="7dp"
-                    android:text="▣  Full Time"
-                    android:textColor="#606872"
-                    android:textSize="15sp" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-    </ScrollView>
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="16dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_job" />
 
 </LinearLayout>

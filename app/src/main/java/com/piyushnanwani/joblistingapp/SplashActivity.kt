@@ -27,9 +27,19 @@ class SplashActivity : AppCompatActivity() {
 
 
         android.os.Handler(android.os.Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, OnboardingActivity::class.java)
-            startActivity(intent)
-            finish()
+            // has the user already signed in
+            val email = PrefsUtils.getString(this, "user_email")
+            if (email != null && !email.isEmpty()) {
+                val intent = Intent(this, TabActivity::class.java)
+                startActivity(intent)
+                finish()
+            } else {
+                val intent = Intent(this, OnboardingActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
+
+
 
         }, 2000)
 

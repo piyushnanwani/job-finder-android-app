@@ -97,8 +97,13 @@ class LoginActivity : AppCompatActivity() {
                 if (task.isSuccessful) {
                     Log.d("LoginActivity", "signInWithCredential:success")
                     val user = auth.currentUser
-                    Log.d("LoginActivity", "User signed in: ${user?.displayName} (${user?.email})")
+
+                    Log.d("LoginActivity", "User signed in: ${user?.displayName} (${user?.email}) (${user.toString()}) ")
                     Toast.makeText(this, "Authentication Successful.", Toast.LENGTH_SHORT).show()
+
+                    PrefsUtils.save(this, "user_email", user?.email.toString())
+                    PrefsUtils.save(this, "user_name", user?.displayName.toString())
+
 
                     val intent = Intent(this, TabActivity::class.java)
                     startActivity(intent)
