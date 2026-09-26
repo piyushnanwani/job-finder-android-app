@@ -5,8 +5,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.coroutines.flow.Flow
 
-class JobAdapter(private val jobs: List<JobItem>) :
+class JobAdapter(private val jobs: MutableList<JobItem> = mutableListOf()) :
     RecyclerView.Adapter<JobAdapter.JobViewHolder>() {
 
     class JobViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -33,4 +34,10 @@ class JobAdapter(private val jobs: List<JobItem>) :
     }
 
     override fun getItemCount() = jobs.size
+
+     fun submitList(receivedJobs: List<JobItem>) {
+        jobs.clear()
+        jobs.addAll(receivedJobs)
+//        notifyDataSetChanged()
+    }
 }
